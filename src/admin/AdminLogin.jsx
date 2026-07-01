@@ -38,11 +38,7 @@ alert("Demo login: admin / admin123");
 
 return (
 
-<div style={{
-padding:"80px",
-textAlign:"center"
-}}>
-
+<div className="login-page">
 
 <h1>
 Campaign Admin Login

@@ -1,3 +1,4 @@
+import "./admin.css";
 import ManageProfile from "./ManageProfile";
 import ManageManifesto from "./ManageManifesto";
 import ManageNews from "./ManageNews";
@@ -9,21 +10,63 @@ function AdminDashboard(){
 
 return (
 
-<div style={{
-padding:"40px"
-}}>
+<div className="admin-layout">
 
+
+{/* SIDEBAR */}
+
+<aside className="sidebar">
+
+<h2>
+Tebere Campaign
+</h2>
+
+
+<a>Dashboard</a>
+<a>Candidate</a>
+<a>Manifesto</a>
+<a>News</a>
+<a>Events</a>
+<a>Supporters</a>
+
+
+</aside>
+
+
+
+
+
+{/* MAIN */}
+
+<main className="admin-main">
+
+
+<header className="topbar">
 
 <h1>
-Campaign Management Dashboard
+Campaign Dashboard
 </h1>
 
 
-<div className="card">
+<div>
+Admin
+</div>
 
-<h2>
+
+</header>
+
+
+
+
+
+<div className="stats">
+
+
+<div className="stat-card">
+
+<h3>
 Supporters
-</h2>
+</h3>
 
 <h1>
 2,540
@@ -33,19 +76,70 @@ Supporters
 
 
 
+<div className="stat-card">
+
+<h3>
+Events
+</h3>
+
+<h1>
+18
+</h1>
+
+</div>
+
+
+
+<div className="stat-card">
+
+<h3>
+Updates
+</h3>
+
+<h1>
+34
+</h1>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div className="panel">
+
+
 <ManageProfile/>
 
-<hr/>
+
+</div>
+
+
+<div className="panel">
 
 
 <ManageManifesto/>
 
-<hr/>
+
+</div>
+
+
+
+<div className="panel">
 
 
 <ManageNews/>
 
-<hr/>
+
+</div>
+
+
+
+<div className="panel">
 
 
 <ManageEvents/>
@@ -53,7 +147,17 @@ Supporters
 
 </div>
 
+
+
+</main>
+
+
+
+</div>
+
+
 )
+
 
 }
 
